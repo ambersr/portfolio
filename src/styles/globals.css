@@ -1,0 +1,219 @@
+@import url(https://db.onlinewebfonts.com/c/63acd86114af91146cb981f667373725?family=Arges+Extra+Bold);
+
+@font-face {
+  font-family: "Arges Heavy";
+  src: url("/fonts/arges-heavy.woff2");
+}
+
+@font-face {
+  font-family: "Arges Extra Bold";
+  src: url("https://db.onlinewebfonts.com/t/63acd86114af91146cb981f667373725.eot");
+  src: url("https://db.onlinewebfonts.com/t/63acd86114af91146cb981f667373725.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/63acd86114af91146cb981f667373725.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/63acd86114af91146cb981f667373725.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/63acd86114af91146cb981f667373725.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/63acd86114af91146cb981f667373725.svg#Arges Extra Bold")format("svg");
+}
+:root {
+
+  /* =============== COLOR =============== */
+  
+  /* Font-family*/
+  --font-body: "Geist Mono", sans-serif;
+  --font-heading: "Arges Heavy", sans-serif;
+
+  /* Headings*/
+  --h1-size: 40px;
+  --h1-line-height: 1.2;
+  --h1-max-width: 60ch;
+
+  --h2-size: 32px;
+  --h2-line-height: 1.3;
+  --h2-max-width: 65ch;
+
+  --h3-size: 26px;
+  --h3-line-height: 1.3;
+  --h3-max-width: 65ch;
+
+  --h4-size: 23px;
+  --h4-line-height: 1.4;
+  --h4-max-width: 70ch;
+
+  --h5-size: 20px;
+  --h5-line-height: 1.4;
+  --h5-max-width: 70ch;
+
+  /* Paragraphs */
+  --p-l-size: 19px;
+  --p-l-line-height: 1.6;
+  --p-l-max-width: 70ch;
+
+  --p-m-size: 18px;
+  --p-m-line-height: 1.7;
+  --p-m-max-width: 70ch;
+
+  --p-s-size: 17px;
+  --p-s-line-height: 1.8;
+  --p-s-max-width: 70ch;
+
+  --p-xs-size: 16px;
+  --p-xs-line-height: 1.8;
+  --p-xs-max-width: 70ch;
+
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+
+  /* =============== COLOR =============== */
+
+  /* PRIMARY COLORS */
+  --primary-bg: #020024;
+  --secondary-bg: #ffffff;
+  --highlight-blue: #4a3aff;
+
+  --text-light: #ffffff;
+  --text-dark: #020024;
+
+  /* ACCENT COLORS (afgeleide tinten) */
+  /* Blue variations */
+  --blue-900: #1f1a66;
+  --blue-700: #3a33cc;
+  --blue-500: #4a3aff;
+  --blue-300: #7c6bff;
+  --blue-100: #d8d4ff;
+
+  /* NEUTRAL COLORS */
+  --neutral-900: #0a0a0f;
+  --neutral-700: #1a1a24;
+  --neutral-500: #4c4c5c;
+  --neutral-300: #b7b7c7;
+  --neutral-100: #ebebf5;
+  }
+
+/* =============== GLOBAL STYLES =============== */
+
+/* Focus state */
+*:focus-visible {
+  outline: 3px dashed var(--primary-orange);
+  outline-offset: 4px;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  color: var(--blue-800);
+  text-wrap: balance;
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 1.8175rem + 2.8736vw, 4.0625rem);
+  line-height: var(--h1-line-height);
+  max-width: var(--h1-max-width);
+}
+
+h2 {
+  font-size: var(--h2-size);
+  line-height: var(--h2-line-height);
+  max-width: var(--h2-max-width);
+}
+
+h3 {
+  font-size: var(--h3-size);
+  line-height: var(--h3-line-height);
+  max-width: var(--h3-max-width);
+}
+
+h4 {
+  font-size: var(--h4-size);
+  line-height: var(--h4-line-height);
+  max-width: var(--h4-max-width);
+}
+
+h5 {
+  font-size: var(--h5-size);
+  line-height: var(--h5-line-height);
+  max-width: var(--h5-max-width);
+}
+
+/* Paragraphs */
+p {
+  font-family: var(--font-body);
+  font-size: clamp(2.5rem, 1.8175rem + 2.8736vw, 4.0625rem);
+}
+
+/* Buttons */
+.button-outline-white {
+  background: var(--button-blue-bg);
+  color: var(--button-blue-text);
+  border: var(--button-blue-border);
+  border-radius: var(--button-blue-radius);
+  padding: var(--button-blue-padding);
+  font-size: var(--button-blue-font-size);
+  font-weight: var(--button-font-weight);
+  cursor: pointer;
+  font-family: var(--button-blue-font-family);
+  width: fit-content;
+  transition: ease-in-out 0.2s;
+
+  &:hover {
+    background-color: var(--text-white);
+    color: var(--primary-blue);
+    border: var(--button-outline-border);
+  }
+}
+
+.button-outline-blue {
+  background: var(--button-outline-bg);
+  color: var(--button-outline-text);
+  border: var(--button-outline-border);
+  border-radius: var(--button-outline-radius);
+  padding: var(--button-outline-padding);
+  font-size: var(--button-outline-font-size);
+  font-weight: var(--button-font-weight);
+  font-family: var(--button-outline-font-family);
+  cursor: pointer;
+  width: fit-content;
+  transition: ease-in-out 0.2s;
+
+  &:hover {
+    background-color: var(--primary-blue);
+    color: var(--text-white);
+    border: var(--button-blue-border);
+  }
+}
+
+a {
+  font-weight: var(--button-font-weight);
+  font-family: var(--button-outline-font-family);
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  &:hover {
+    transform: translateY(-2px);
+    /* box-shadow: 0 4px 10px rgba(0, 64, 141, 0.2); */
+  }
+}
